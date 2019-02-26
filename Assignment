@@ -1,0 +1,65 @@
+def distribute(a, b, c, d)->str:
+  '''
+  a, b, c, d are integers representing the coefficients of the expression (ax+b)(cx+d). Return a string of the form "Ax^2+Bx+C" such that   Ax^2+Bx+C=(ax+b)(cx+d)
+  >>>distribute((2x+4)(3x+1))
+  6x^2+2x+12x+4
+  6x^2+14x+4
+  '''
+  A=a*c
+  B+a*d+c*b
+  C=b*d
+  return "Ax**2+B*x+C"
+  
+def factor(a, b, c)->str:
+  '''
+  a, b, and c are integers representing the coefficients of the expression ax^2+bx+c. Return a string of the form "(Ax+B)(Cx+D)" such that (Ax+B)(Cx+D)=ax^2+bx+c.
+  >>>factor(x^2+3x+2)
+  x^2+2x+1x+2
+  x(x+2)+(x+2)
+  (x+1)(x+2)
+  '''
+  for A in range(a):
+   for B in range(c):
+    for C in range(a):
+     for D in range(c):
+  if a==A*C, b==A*D+B*C, and c==B*D
+  return "(str(A)+"x"+str(B)+"x"+str(C)+"x"+str(D)+"x")"
+  
+  def valid_choice(value)->bool:
+    '''
+    return true iff the chosen value is "f" or "d".
+    >>>valid_choice("d")
+    True
+    >>>valid_choice("m")
+    False
+    '''
+    if value=="f" or "d"
+   return true 
+    else:
+   return false 
+  
+  def valid_coefficient(A, a, B, b, C, c, D)->bool:
+    '''
+    return true iff all A, a, B, b, C, c, D are integers, with a, b, and c being integers larger than those of A, B, C, D
+    >>>valid_coefficients(1, 6, 2, 7, 3, 8, 4)
+    True 
+    >>>valid_coefficients(1, 2, 1.7, a, 4, 3, 0)
+    False 
+    '''
+    if (A, a, B, b, C, c, D)==int
+   return True 
+    else:
+   return False
+   
+  if__name__=="__main__":
+    selection=input("Would you like to (f)actor or (d)istribute?")
+    while not valid_choice(selection):
+      selection=input("Select a valid option:\"f\" for factoring, or \"d\" for distributing")
+      
+    if selection=="f":
+      #get valid input for your coefficients
+      print(factor(a, b, c))
+      
+    elif selection=="d":
+      #get valid input for your coefficients 
+      print(distribute(a, b, c, d))
